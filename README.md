@@ -19,3 +19,11 @@ uv pip freeze > requirements.txt
 ```
 
 to make life easier. 
+
+## RAM issue
+
+An `sinteractive --gres=gpu:a100:1` instance did not have sufficient RAM to deal with model. Going to try again with
+
+```bash
+sinteractive --mem=16g --gres=gpu:a100:1
+```
