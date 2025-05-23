@@ -1,2 +1,13 @@
-# olmocr_testing
-Code used to test the inference performance of AI2's olmOCR model preview
+# olmOCR on Biowulf
+
+# olmOCR Install
+
+Well... uv doesn't play nice with pip's `--find-links` install for `olmOCR[gpu]` package. No way to record this in pyproject.toml that I know of.
+
+ So... after using uv to set up a python 3.11 venv, Josh ran:
+
+```bash
+uv pip install olmocr[gpu] --find-links=https://flashinfer.ai/whl/cu124/torch2.4/flashinfer/
+```
+
+as stated in the [olmOCR GitHub README.md](https://github.com/allenai/olmocr)
